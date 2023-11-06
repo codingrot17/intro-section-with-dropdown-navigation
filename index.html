@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -11,71 +10,242 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="query.css" />
 
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <header>
-      <div class="header_container">
-        <div class="left_side">
+      <!-- general flex container  -->
+      <div class="header flex_container">
+
+        <!-- flex container for the logo and navigation -->
+        <div class="flex_container gap">
+
+          <!-- the logo  -->
           <img src="images/logo.svg" alt="logo" />
-          <div class="drop_downs">
-            <div class="features">
-              <span>Features</span>
-              <img src="images/icon-arrow-down.svg" alt="icon-arrow-down" />
-            </div>
-            <div class="company">
-              <span>Company</span>
-              <img src="images/icon-arrow-down.svg" alt="icon-arrow-down" />
-            </div>
-            <div class="career"><span> Careers</span></div>
-            <div class="about"><span>About</span></div>
+
+          <!-- the desktop navigation section -->
+          <nav class="nav">
+
+            <!-- the desktop navigation bar -->
+            <ul class="nav_bar">
+
+              <!-- Desktop Feature's drop down -->
+              <li class="drop_down arrow_parent">
+                <a href="#"
+                  >Features
+                  <img class="arrow" src="images/icon-arrow-down.svg" alt="arrow down"
+                /></a>
+
+                <!-- Feature's drop down content -->
+                <div class="drop_down_content">
+                  <ul class="drop_down_navbar">
+                    <li>
+                      <a href="#">
+                        <img src="images/icon-todo.svg" alt="todo" /><span
+                          >Todo List</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="images/icon-calendar.svg"
+                          alt="calender"
+                        /><span>Calender</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="images/icon-reminders.svg"
+                          alt="reminders"
+                        /><span>Reminders</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="images/icon-planning.svg"
+                          alt="planning"
+                        /><span>Planning</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <!--Desktop Company's drop down -->
+              <li class="arrow_parent2 company drop_down">
+                <a href="#"
+                  >Company
+                  <img class="arrow2" src="images/icon-arrow-down.svg" alt="arrow down"
+                /></a>
+
+                <!-- Company's drop down content -->
+                <div class="drop_down_content">
+                  <ul class="drop_down_navbar">
+                    <li>
+                      <a href="#"> History </a>
+                    </li>
+                    <li>
+                      <a href="#"> Our Team </a>
+                    </li>
+                    <li>
+                      <a href="#"> Blog </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- The login and Register button -->
+        <div class="buttons">
+          <button class="login_button" type="button">Login</button>
+          <button class="register_button" type="button">Register</button>
+        </div>
+
+        <div class="menu">
+
+          <!-- The mobile toggle menu button, the open and close respectively -->
+          <div class="menu_icon">
+            <img id="icon" src="images/icon-menu.svg" alt="menu">
+            <img id="close_icon" src="images/icon-close-menu.svg" alt="menu">
           </div>
+
+          <div id="navigation">
+
+            <!-- The mobile navigation section -->
+            <nav class="mobile_nav">
+              
+              <!-- The mobile navigation bar -->
+              <ul class="mobile_nav_bar">
+
+                <!--The mobile Feature's drop down -->
+                <li class="drop_down mobile_arrow_parent">
+                  <a id="first_feature" href="#"
+                    >Features
+                    <img class="mobile_arrow" src="images/icon-arrow-down.svg" alt="arrow down"
+                  />
+                  <a id="second_feature" href="#"
+                    >Features
+                  <img class="mobile_arrow" src="images/icon-arrow-up.svg" alt="arrow down"
+                  /></a>
+                  <div id="feature_nav" class="feature_drop_down">
+                    <ul class="drop_down_navbar">
+                      <li>
+                        <a href="#">
+                          <img src="images/icon-todo.svg" alt="todo" /><span
+                            >Todo List</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="images/icon-calendar.svg"
+                            alt="calender"
+                          /><span>Calender</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="images/icon-reminders.svg"
+                            alt="reminders"
+                          /><span>Reminders</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="images/icon-planning.svg"
+                            alt="planning"
+                          /><span>Planning</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <!-- The mobile Company's drop down -->
+                <li class="mobile_arrow_parent2 company drop_down">
+                  <a id="first_company" href="#"
+                    >Company
+                    <img class="mobile_arrow2" src="images/icon-arrow-down.svg" alt="arrow down"
+                  /></a>   
+                  <a id="second_company" href="#"
+                    >Company
+                    <img class="mobile_arrow2" src="images/icon-arrow-up.svg" alt="arrow down"
+                  /></a>   
+                  <div id="company_nav" class="company_drop_down">
+                    <ul class="drop_down_navbar">
+                      <li>
+                        <a href="#"> History </a>
+                      </li>
+                      <li>
+                        <a href="#"> Our Team </a>
+                      </li>
+                      <li>
+                        <a href="#"> Blog </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </nav>
+            <div class="mobile_buttons">
+              <button class="login_button" type="button">Login</button>
+            <button class="register_button" type="button">Register</button>
+            </div>
+          </div>
+          <div class="transparent_background"></div>
         </div>
-        <div class="right_side">
-          <button class="login">Login</button>
-          <button class="register">Register</button>
-        </div>
-      </div>
-      <div class="feature_dropdown">
-        <ul>
-          <li><span>Todo List</span><img src="images/icon-todo.svg" alt="Todo icon"></li>
-          <li><span>Calender</span><img src="images/icon-calendar.svg" alt="Calender"></li>
-          <li><span>Reminders</span><img src="images/icon-reminders.svg" alt="reminder"></li>
-          <li><span>Planning</span><img src="images/icon-planning.svg" alt="Planning"></li>
-        </ul>
-      </div>
-      <div class="company_dropdown">
-        <ul>
-          <li>History</li>
-          <li>Our Team</li>
-          <li>Blog</li>
-        </ul>
       </div>
     </header>
+
+    <!-- Main section -->
     <main>
       <section>
-        <div class="sections">
-          <span class="bold">Make remote work</span>
-          <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-          <button class="learn">Learn more</button>
-          <div class="social_icon">
-            <img src="images/client-databiz.svg" alt="client-databi">
-            <img src="images/client-audiophile.svg" alt="client-audiophile">
-            <img src="images/client-meet.svg" alt="client-meet">
-            <img src="images/client-maker.svg" alt="client-maker">
+        <div class="container flex_container">
+          <div class="top_side">
+            <img src="images/image-hero-mobile.png" alt="">
           </div>
-        </div>
-      </section>
-      <section>
-        <div class="hero_section">
-          <img src="images/image-hero-desktop.png" alt="image-hero-desktop">
+
+          <!-- The text container  -->
+          <div class="left_side">
+            <div class="heading">
+              <h1>Make</h1>
+              <h1>remote work</h1>
+            </div>
+            <div class="heading2">
+              <h1>Make remote work</h1>
+            </div>
+            <p>Get your team in sync, no matter your location. Streamline processes, 
+              create team rituals, and watch productivity soar.</p>
+            <button>Learn more</button>
+            <div class="logos">
+              <img src="images/client-databiz.svg" alt="databiz">
+              <img src="images/client-audiophile.svg" alt="audiophile">
+              <img src="images/client-meet.svg" alt="meet">
+              <img src="images/client-maker.svg" alt="maker">
+            </div>
+          </div>
+          <div class="right_side">
+            <img src="images/image-hero-desktop.png" alt="">
+          </div>
         </div>
       </section>
     </main>
-
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
