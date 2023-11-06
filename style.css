@@ -1,0 +1,64 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    color: #585656;
+}
+
+ul{
+    list-style-type: none;
+}
+
+header{
+    padding: 10px 24px;
+}
+
+.header_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+header .left_side{
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.left_side .drop_downs{
+    display: flex;
+    gap: 20px;
+}
+
+header .right_side{
+    display: flex;
+    gap: 30px;
+}
+
+.right_side .login{
+    border: none;
+    background: none;
+}
+
+.right_side .register{
+    border-radius: 10px;
+    background: none;
+    border: 1px solid #585656;
+    padding: 5px 10px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+}
